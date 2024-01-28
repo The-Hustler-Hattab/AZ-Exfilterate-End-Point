@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "48671001-126e-4943-8dd3-4af24afeb1b8"
+        },
+        "name": {
+            "value": "file-exfiltration"
+        },
+        "location": {
+            "value": "East US"
+        },
+        "ftpsState": {
+            "value": "FtpsOnly"
+        },
+        "storageAccountName": {
+            "value": "master8d5a"
+        },
+        "sku": {
+            "value": "Dynamic"
+        },
+        "skuCode": {
+            "value": "Y1"
+        },
+        "workerSize": {
+            "value": "0"
+        },
+        "workerSizeId": {
+            "value": "0"
+        },
+        "numberOfWorkers": {
+            "value": "1"
+        },
+        "use32BitWorkerProcess": {
+            "value": false
+        },
+        "netFrameworkVersion": {
+            "value": "v8.0"
+        },
+        "hostingPlanName": {
+            "value": "ASP-master-9027"
+        },
+        "serverFarmResourceGroup": {
+            "value": "master"
+        },
+        "alwaysOn": {
+            "value": false
+        }
+    }
+}

@@ -4,6 +4,9 @@
 
 This Azure Functions serverless API is developed for the purpose of demonstrating secure file handling, exfiltration techniques, and storage solutions in cloud environments. It's designed to prepend the current date to filenames, record the transaction in Cosmos DB, and store the files securely in Azure Blob Storage. This project is intended for educational use and security research within legal and ethical boundaries.
 
+## Youtube Demo
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/qK3GkVzI35o/0.jpg)](https://www.youtube.com/watch?v=qK3GkVzI35o&ab_channel=MohammedHattab)
+
 ## Features
 
 - **Date Modification**: Automatically modifies file names by prepending the current date, facilitating better file management and tracking.

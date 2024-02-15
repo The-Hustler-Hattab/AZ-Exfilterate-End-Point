@@ -15,7 +15,7 @@ using First_Demo_finc.services;
 
 namespace Exfilterate.functions
 {
-    public class ExfiltrateFilesFunction
+    public class FilesFunction
     {
 
         [Function("ExfiltrateFiles")]

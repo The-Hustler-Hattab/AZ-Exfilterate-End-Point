@@ -1,5 +1,6 @@
 ﻿using Exfilterate.utilites;
 using Microsoft.Azure.Cosmos;
+using Newtonsoft.Json;
 
 
 namespace Exfilterate.services
@@ -30,5 +31,28 @@ namespace Exfilterate.services
 
 
         }
+        public async static Task<string> GetAllRecordsAsync()
+        {
+            var records = new List<dynamic>();
+
+
+            var query = new QueryDefinition("SELECT * FROM c");
+            var iterator = CosmosContainer.GetItemQueryIterator<dynamic>(query);
+
+            while (iterator.HasMoreResults)
+            {
+                var response = await iterator.ReadNextAsync();
+                foreach (var item in response)
+                {
+                    records.Add(item);
+                }
+            }
+            // Serialize the list to JSON string
+            string jsonString = JsonConvert.SerializeObject(records);
+            return jsonString;
+        }
     }
+
+
 }
+

@@ -38,6 +38,22 @@ namespace Exfilterate.services
 
         }
 
+        public async static Task<Stream> DownloadFileFromBlobAsync(string blobFileName)
+        {
+            var blob = container.GetBlockBlobReference(blobFileName);
+
+            if (!await blob.ExistsAsync())
+            {
+                throw new FileNotFoundException($"File {blobFileName} not found in the blob container.");
+            }
+
+            var memoryStream = new MemoryStream();
+            await blob.DownloadToStreamAsync(memoryStream);
+            memoryStream.Position = 0;
+
+            return memoryStream;
+        }
+
 
     }
 }

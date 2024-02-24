@@ -16,5 +16,10 @@ namespace Exfilterate.utilites
         /* BLOB CREDS*/
         public static string AZURE_BLOB_CONNECTION_STRING = Environment.GetEnvironmentVariable("AZURE_BLOB_CONNECTION_STRING");
         public static string AZURE_BLOB_NAME = Environment.GetEnvironmentVariable("AZURE_BLOB_NAME");
+        
+        /*JWK ENDPOINT*/
+        public static string JWK_ENDPOINT = Environment.GetEnvironmentVariable("JWK_ENDPOINT");
+
+        
     }
 }
